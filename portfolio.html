@@ -1736,9 +1736,8 @@ points throughout the day without charging it every few hours. </p>
 
 <p class=MsoNormal>Power the implantable glucose sensor on a lower duty cycle <span
 class=GramE>in order to</span> reduce power consumption and extend the life of
-the externally worn battery. However, the rate at which the subcutaneous
-electrochemical sensor is switched on and off at could buildup interstitial
-ions around the implant and affect the signal output of the sensor if there
+the system. However, the rate at which the subcutaneous
+electrochemical sensor is switched on and off at could affect the signal output of the sensor if there
 isn’t a proper sensor stabilization period. To meet specifications signal
 output had to be within a 5% margin of error. </p>
 
@@ -1749,39 +1748,30 @@ style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
 Symbol;color:#E8E8E8;mso-themecolor:background2'><span style='mso-list:Ignore'>·<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Formulated
 pulse width modulation (<span class=SpellE>pwm</span>) algorithms in C++ to
-operate the system’s microcontroller at various duties cycles. <u><o:p></o:p></u></p>
+operate the system’s microcontroller at lower duties cycles. <u><o:p></o:p></u></p>
 
 <p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l1 level1 lfo1'><![if !supportLists]><span
 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
 Symbol;color:#E8E8E8;mso-themecolor:background2'><span style='mso-list:Ignore'>·<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Formulated
-an algorithm to extract necessary parameters to process sensor output. Created
+a C++ algorithm to extract necessary parameters to process sensor output. Created
 MATLAB script to continuously graph processed output signal. <u><o:p></o:p></u></p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l1 level1 lfo1'><![if !supportLists]><span
-style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol;color:#E8E8E8;mso-themecolor:background2'><span style='mso-list:Ignore'>·<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>All
-algorithms were written in Arduino IDE and <span class=SpellE>Segger</span>
-Embedded Studios to compile on an UNO R3 and a BMD-340 for initial and final
-iterations, respectively. <u><o:p></o:p></u></p>
 
 <p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l1 level1 lfo1'><![if !supportLists]><span
 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
 Symbol;color:#E8E8E8;mso-themecolor:background2'><span style='mso-list:Ignore'>·<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>A
 breakout PCB of the implantable miniaturized sensor components was designed
-(Eagle Autodesk Fusion) and interfaced with the respective microcontrollers to
+in Autodesk Fusion and interfaced with the respective microcontroller to
 test <span class=SpellE>pwm</span> algorithms on sensor output.<u><o:p></o:p></u></p>
 
 <p class=MsoListParagraphCxSpLast style='text-indent:-.25in;mso-list:l1 level1 lfo1'><![if !supportLists]><span
 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
 Symbol;color:#E8E8E8;mso-themecolor:background2'><span style='mso-list:Ignore'>·<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>For
-each duty cycle variation, sensor output was collected using the same glucose
-concentration and across the same duration of time. Different modes of percent
-error were used to determine the percent error of sensor output for each duty
-cycle variation. <u><o:p></o:p></u></p>
+each pulse width modulation algorithim variation, sensor output was collected using the same glucose
+concentration across the same duration of time. Different modes of percent
+error were used to determine the percent error of sensor output for each algorithim variation. <u><o:p></o:p></u></p>
 
 <p class=MsoNormal><u>Outcome: <o:p></o:p></u></p>
 
@@ -1850,7 +1840,7 @@ field-begin'></span><span style='mso-spacerun:yes'> </span>SEQ Figure \* ARABIC
 <span style='mso-element:field-separator'></span><![endif]--><span
 style='mso-no-proof:yes'>1</span><!--[if supportFields]><span style='mso-element:
 field-end'></span><![endif]--> &amp; <span class=GramE>2 :</span> Schematic and
-PCB layout of “broken out” miniaturized sensor components compatible with UNO
+PCB layout of sensor hardware compatible desgined to be compatible with an UNO
 R3 microcontroller. </p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
@@ -1920,16 +1910,15 @@ alt="Text Box: Figure 3 : Verifying system’s sensor output with UNO R3 compati
 v:shapes="Text_x0020_Box_x0020_1"><![endif]></p>-->
 <video src="SystemDemo20242.mov" width="320" height="200" controls preload></video>
 <p class=MsoCaption>Figure <span class=GramE>3 :</span> Verifying system’s
-    sensor output with UNO R3 compatible break out PCB driving electrochemical
-    sensor resting in PBS solution in accordance <span class=GramE>to</span>
-    microcontroller’s compiled <span class=SpellE>pwm</span> algorithm.
-    Sensor’s output is processed and plotted on the screen. Sensor response can be witness after the addition of glucose shown here. <span
+    sensor output for each pulse width modulation algorithim.  <span class=GramE>to</span>
+  <span class=SpellE></span>  <span
     style='mso-no-proof:yes'><o:p></o:p></span></p>
 </div>
 
 </body>
 
 </html>
+
 
 
 
