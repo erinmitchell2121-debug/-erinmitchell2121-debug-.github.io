@@ -1738,7 +1738,7 @@ points throughout the day without charging it every few hours. </p>
 class=GramE>in order to</span> reduce power consumption and extend the life of
 the system. However, the rate at which the subcutaneous
 electrochemical sensor is switched on and off at could affect the signal output of the sensor if there
-isn’t a proper sensor stabilization period. To meet specifications signal
+isn’t a proper sensor stabilization period. To meet specifications, signal
 output had to be within a 5% margin of error. </p>
 
 <p class=MsoNormal><u>Contributions: <o:p></o:p></u></p>
@@ -1754,32 +1754,33 @@ operate the system’s microcontroller at lower duties cycles. <u><o:p></o:p></u
 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
 Symbol;color:#E8E8E8;mso-themecolor:background2'><span style='mso-list:Ignore'>·<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Formulated
-a C++ algorithm to extract necessary parameters to process sensor output. Created
-MATLAB script to continuously graph processed output signal. <u><o:p></o:p></u></p>
+ C++ algorithms to extract necessary parameters to process sensor output. Created custom
+MATLAB scripts to dynamically plot processed output signal. <u><o:p></o:p></u></p>
 
 <p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l1 level1 lfo1'><![if !supportLists]><span
 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
 Symbol;color:#E8E8E8;mso-themecolor:background2'><span style='mso-list:Ignore'>·<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>A
-small Printed Circiut Board of the implantable miniaturized sensor hardware was designed
-in Autodesk Fusion and interfaced with the respective microcontroller to
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Designed a
+small PCB of miniaturized sensor hardware
+in Eagle Autodesk Fusion. PCB was interfaced with the respective microcontroller to
 test <span class=SpellE> sensor output </span> at different system duty cycles.<u><o:p></o:p></u></p>
 
 <p class=MsoListParagraphCxSpLast style='text-indent:-.25in;mso-list:l1 level1 lfo1'><![if !supportLists]><span
 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
 Symbol;color:#E8E8E8;mso-themecolor:background2'><span style='mso-list:Ignore'>·<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>For
-each duty cycle variation , sensor output was collected using the same glucose
-concentration across the same duration of time. Different modes of percent
+each duty cycle variation, sensor output was tested after placing the electochemical sensor 
+in a known concentration of glucose. Different modes of percent
 error were used to determine the percent error of sensor output for each duty cycle. <u><o:p></o:p></u></p>
 
 <p class=MsoNormal><u>Outcome: <o:p></o:p></u></p>
 
-<p class=MsoNormal>While all duty cycle variations were under 5% margin of
-error, as expected lower duty cycles led to higher error most likely related to
-the insufficient time for the sensor to stabilize. However, even the higher
-duty cycles implemented by the <span class=SpellE>pwm</span> algorithms were
-able to extend battery life by around 60%.</p>
+<p class=MsoNormal>For all duty cycle variations, sensor output was under a 5% margin of
+error, however, as expected lower duty cycles led to higher sensor output error most likely related to
+the insufficient time for the sensor to stabilize. As higher
+duty cycles tested <span class=SpellE>pwm</span> were
+able to extend battery life by around 60% and resulted in the lowest error this was sufficient to drive the system and 
+potentially decrease the battery size and capacity.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
@@ -1826,12 +1827,12 @@ yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_4" o:spid="_x0000_i1026"
  mso-wrap-style:square'>
  <v:imagedata src="portfolio.fld/image001.png" o:title=""/>
 </v:shape><![endif]--><![if !vml]><img width=251 height=143
-src="PCBLayout2024.png" v:shapes="Picture_x0020_4"><![endif]><!--[if gte vml 1]><v:shape
+src="BOSchematic2024.png" v:shapes="Picture_x0020_4"><![endif]><!--[if gte vml 1]><v:shape
  id="Picture_x0020_3" o:spid="_x0000_i1025" type="#_x0000_t75" alt="A circuit board with many wires&#10;&#10;AI-generated content may be incorrect."
  style='width:217pt;height:171pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="portfolio.fld/image002.png" o:title="A circuit board with many wires&#10;&#10;AI-generated content may be incorrect"/>
 </v:shape><![endif]--><![if !vml]><img width=217 height=171
-src="BOSchematic2024.png"
+src="PCBLayout2024.png"
 alt="A circuit board with many wires&#10;&#10;AI-generated content may be incorrect."
 v:shapes="Picture_x0020_3"><![endif]></span></p>
 
@@ -1936,6 +1937,7 @@ v:shapes="Picture_x0020_3"><![endif]></span></p>
 </body>
 
 </html>
+
 
 
 
