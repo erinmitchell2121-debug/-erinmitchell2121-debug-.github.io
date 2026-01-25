@@ -82,31 +82,32 @@
 
     <h2>Problem</h2>
     <p>
-      CGM battery life only lasted a few hours. This is not sufficient for those who must monitor their glucose
-      levels at various points throughout the day without charging every few hours.
+      CGM battery life lasted approximatley 3 hours. This is not sufficient for individuals who must monitor their glucose
+      levels at various points throughout the day without re-charging the battery every few hours.
     </p>
 
     <h2>Solution</h2>
     <p>
       Power the implantable glucose sensor on a lower duty cycle to reduce power consumption and extend the life of
-      the system. However, switching the subcutaneous electrochemical sensor on/off can affect sensor signal output
+      the system. However, switching of the subcutaneous electrochemical sensor can affect sensor signal output
       without a proper stabilization period. To meet specifications, the signal output had to be within a 5% margin
       of error.
     </p>
 
     <h2>Contributions</h2>
     <ul>
-      <li>Formulated pulse width modulation (PWM) algorithms in C++ to operate the system’s microcontroller at lower duty cycles.</li>
-      <li>Formulated a C++ algorithm to extract necessary parameters to process sensor output. Created a MATLAB script to continuously graph the processed output signal.</li>
-      <li>Designed a small printed circuit board for the implantable miniaturized sensor hardware in Autodesk Fusion and interfaced it with the respective microcontroller to test PWM algorithms on sensor output.</li>
-      <li>For each PWM algorithm variation, collected sensor output using the same glucose concentration over the same duration. Used multiple percent-error modes to determine the error for each variation.</li>
+      <li>Formulated various pulse width modulation (PWM) algorithms in C++ to test operatation of the system at various lower duty cycles.</li>
+      <li>Formulated a C++ algorithm to extract necessary parameters to process sensor output.</li>
+      <li>Built a custom breakout PCB to enable repeatable hardware-software integration testing.</li>
+      <li>Created a multi-modal data acquistion system to acquire raw sensor data, process and vizualise preformance in real time.</li>
+      <li>Designed and executed verification tests to ensure both device and measurement system consistancy.</li>
     </ul>
 
     <h2>Outcome</h2>
     <p>
-      While all duty cycle variations were under the 5% margin of error, lower duty cycles led to higher error—most
-      likely due to insufficient time for the sensor to stabilize. However, even the higher duty cycles implemented by
-      the PWM algorithms extended battery life by around 60%.
+      While all duty cycle variations were under the 5% margin of error, lower duty cycles led to higher error 
+      most likely due to insufficient time for the sensor to stabilize. Lower duty cycles extended battery on average 75%, 
+      while higher duty cycles extended battery life around 15%.
     </p>
 
     <h2>Figures</h2>
@@ -114,7 +115,7 @@
     <!-- Update src paths to match your repo. Example: assets/image001.png -->
     <figure>
       <img src="image.png" alt="Schematic and PCB layout of sensor hardware compatible with an UNO R3 microcontroller." />
-      <figcaption><span class="label">Figure 1.</span> Schematic (#1) and PCB layout (#2) of sensor hardware designed to be compatible with an UNO R3 microcontroller.</figcaption>
+      <figcaption><span class="label">Figure 1.</span> Schematic (#1) and PCB layout (#2) of sensor hardware designed to .</figcaption>
     </figure>
 
     <figure>
@@ -141,6 +142,7 @@
   </main>
 </body>
 </html>
+
 
 
 
